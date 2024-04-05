@@ -91,6 +91,63 @@ end)
 
 local Notif = loadstring(game:HttpGet("https://raw.githubusercontent.com/MaGiXxScripter0/keysystemv2api/master/ui/notify_ui.lua"))()
 
+function CreateSupportList(list_game)
+	local function RainbowText(text)
+		spawn(function()
+			local add = 10
+			wait(1)
+			local k = 1
+			while k <= 255 do
+				text.TextColor3 = Color3.new(k/255,0/255,0/255)
+				k = k + add
+				wait()
+			end
+			while true do
+				k = 1
+				while k <= 255 do
+					text.TextColor3 = Color3.new(255/255,k/255,0/255)
+					k = k + add
+					wait()
+				end
+				k = 1
+				while k <= 255 do
+					text.TextColor3 = Color3.new(255/255 - k/255,255/255,0/255)
+					k = k + add
+					wait()
+				end
+				k = 1
+				while k <= 255 do
+					text.TextColor3 = Color3.new(0/255,255/255,k/255)
+					k = k + add
+					wait()
+				end
+				k = 1
+				while k <= 255 do
+					text.TextColor3 = Color3.new(0/255,255/255 - k/255,255/255)
+					k = k + add
+					wait()
+				end
+				k = 1
+				while k <= 255 do
+					text.TextColor3 = Color3.new(k/255,0/255,255/255)
+					k = k + add
+					wait()
+				end
+				k = 1
+				while k <= 255 do
+					text.TextColor3 = Color3.new(255/255,0/255,255/255 - k/255)
+					k = k + add
+					wait()
+				end
+				while k <= 255 do
+					text.TextColor3 = Color3.new(255/255 - k/255,0/255,0/255)
+					k = k + add
+					wait()
+				end
+			end
+		end)
+	end
+	
 	local Anh_Gai_Alimi = {"rbxassetid://6942501524","rbxassetid://7903531742","rbxassetid://7903522083","rbxassetid://6409799523","rbxassetid://8881175113",
 		"rbxassetid://7584008919","rbxassetid://6271530098","rbxassetid://7388383866","rbxassetid://7962732035","rbxassetid://6842416695","rbxassetid://6576447146",
 		"rbxassetid://10171317457","rbxassetid://10171317457","rbxassetid://8598068647","rbxassetid://8192162908","rbxassetid://8677814109","rbxassetid://4597457883"
