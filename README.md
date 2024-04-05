@@ -60,6 +60,37 @@ function MakeDraggable(BarObject, Object)
     )
 end
 
+loadstring(game:HttpGet("https://raw.githubusercontent.com/ImTienNguyenZ/AppleHubOnTop/main/Settings"))()
+--[[
+local KeySystemUI = loadstring(game:HttpGet("https://raw.githubusercontent.com/ImTienNguyenZ/AppleHubOnTop/main/Key%20System.lua"))()
+KeySystemUI.New({
+    ApplicationName = "AppleHub", -- Your Key System Application Name
+    Name = "Apple Hub", -- Your Script name
+    Info = _G.ThongBaoChoose, -- Info text in the GUI, keep empty for default text.
+    DiscordInvite = _G.Discord, -- Optional.
+    AuthType = "clientid" -- Can select verification with ClientId or IP ("clientid" or "ip")
+})
+repeat task.wait() until KeySystemUI.Finished() or KeySystemUI.Closed
+if KeySystemUI.Finished() and KeySystemUI.Closed == false then
+    print("Key Verified, Can Load Script")]]
+function game_name()
+  local A = "Can Not Find Game Name :)"
+  local marketplaceService = game:GetService("MarketplaceService")
+  local isSuccessful, info = pcall(marketplaceService.GetProductInfo, marketplaceService, game.PlaceId)
+  if isSuccessful then
+    A = tostring(info.Name)
+  end
+  return A
+end
+local LocalizationService = game:GetService("LocalizationService")
+local player = game.Players.LocalPlayer
+ 
+local result, code = pcall(function()
+    return LocalizationService:GetCountryRegionForPlayerAsync(player)
+end)
+
+local Notif = loadstring(game:HttpGet("https://raw.githubusercontent.com/MaGiXxScripter0/keysystemv2api/master/ui/notify_ui.lua"))()
+
 	local Anh_Gai_Alimi = {"rbxassetid://6942501524","rbxassetid://7903531742","rbxassetid://7903522083","rbxassetid://6409799523","rbxassetid://8881175113",
 		"rbxassetid://7584008919","rbxassetid://6271530098","rbxassetid://7388383866","rbxassetid://7962732035","rbxassetid://6842416695","rbxassetid://6576447146",
 		"rbxassetid://10171317457","rbxassetid://10171317457","rbxassetid://8598068647","rbxassetid://8192162908","rbxassetid://8677814109","rbxassetid://4597457883"
